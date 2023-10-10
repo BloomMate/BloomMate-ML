@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["Roboflow"]
+  "cSpell.words": [
+    "argmax",
+    "keepdims",
+    "Roboflow",
+    "softmax",
+    "tflight",
+    "tflite"
+  ]
 }
