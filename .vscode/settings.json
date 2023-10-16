@@ -1,7 +1,13 @@
 {
   "cSpell.words": [
     "argmax",
+    "astype",
+    "AUTOTUNE",
+    "Crossentropy",
+    "figsize",
+    "imshow",
     "keepdims",
+    "relu",
     "Roboflow",
     "softmax",
     "tflight",
