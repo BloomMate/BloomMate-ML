@@ -25,7 +25,7 @@ Therefore, we had to find a custom dataset. Fortunately, we found the best one f
 
 | 🍅 tomato | 🥔 potato | 🌽 corn | 🍓 strawberry |
 | --------- | --------- | ------- | ------------- |
-| to        | po        | co      | stra          |
+| Tomato Early blight<br>Tomato Late blight<br>Tomato Target Spot<br>Tomato Yellow Leaf Curl Virus<br>Tomato healthy|Potato Late blight<br>Potato Early blight<br>Potato healthy|Corn Common rust<br>Corn Gray leaf spot<br>Corn Northern Leaf Blight<br>Corn healthy|Strawberry healthy<br>Strawberry Leaf scorch|
 
 ## ③ Model (Resnet-50)
 
