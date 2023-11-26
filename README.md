@@ -21,11 +21,11 @@ As we'll see later, Resnet-50 is a model that has been pre-trained on multiple d
 
 Therefore, we had to find a custom dataset. Fortunately, we found the best one for our situation at this [link](https://data.mendeley.com/datasets/tywbtsjrjv/1). However, we had a problem with over-fitting in the first training, so we set the data for all classes to 1000.
 
-> Dataset Classes
+#### Dataset Classes
 
-> | 🍅 tomato | 🥔 potato | 🌽 corn | 🍓 strawberry |
-> | --------- | --------- | ------- | ------------- |
-> | to        | po        | co      | stra          |
+| 🍅 tomato | 🥔 potato | 🌽 corn | 🍓 strawberry |
+| --------- | --------- | ------- | ------------- |
+| to        | po        | co      | stra          |
 
 ## ③ Model (Resnet-50)
 
@@ -69,7 +69,7 @@ The results of the training are shown below, a graph of loss versus accuracy, wh
 
 ![Alt text]('./training-result.png')
 
-If you take a look at the code, you'll see that it says that the corn is not diseased with 100% accuracy for corn that is not normally diseased. (It was harder to get leaves from diseased/non-diseased plants than I thought, because people are all interested in the fruit rather than the leaves 😅)
+If you take a look at the code result, you'll see that it says that the corn is not diseased with 100% accuracy for corn that is not normally diseased. (It was harder to get leaves from diseased/non-diseased plants than I thought, because people are all interested in the fruit rather than the leaves 😅)
 
 > 1/1 [==============================] - 0s 93ms/step  
 > This image most likely belongs to Corn\_\_\_healthy with a 100.00 percent confidence.
@@ -81,7 +81,13 @@ We then needed to apply our trained model to the BloomMate service. We had a num
 1. tensorflow-lite reduces the size of the model (performance remains largely unchanged), so the smaller model is less likely to overload the backend server.
 2. The frontend cannot maintain a bundle size of more than 100MB due to the policies of the Play Store and App Store. The BloomMate application is about 60MB, and even though tensorflow-lite's model is lightweight, it is close to 90MB, so it was not possible to port the model and make it work on the frontend.
 
-So we decided to run the model on a backend powered by Django. (We designed the software from the ground up so that the programming language was the same.) The code for that can be found at [this link](https://github.com/BloomMate/BloomMate-BE/blob/main/plants/utils.py#L45). Finally, check out the video and photos below to see the diagnosis in action in BloomMate!
+So we decided to run the model on a backend powered by Django. (We designed the software from the ground up so that the programming language was the same.) The code for that can be found at [this link](https://github.com/BloomMate/BloomMate-BE/blob/main/plants/utils.py#L45). Finally, check out the video and screenshots below to see the diagnosis in action in BloomMate!
+
+#### Screenshots
+
+|`Strawberry-healthy`|`Strawberry-Leaf-Scortch`|
+|--------------------|-------------------------|
+|<img src="https://github.com/BloomMate/BloomMate-ML/assets/60422588/d7f33f5f-b785-4679-aaed-d66b526d18b0" width="275" height="550"/>|<img src="https://github.com/BloomMate/BloomMate-ML/assets/60422588/a9955a08-ba88-48f3-bf19-c9d36a9df324" width="275" height="550"/>|
 
 ## Reference
 
