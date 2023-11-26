@@ -67,7 +67,8 @@ epochs=10
 
 The results of the training are shown below, a graph of loss versus accuracy, which looks somewhat idealized. (The details will vary with each training.)
 
-![Alt text]('./training-result.png')
+![image](https://github.com/BloomMate/BloomMate-ML/assets/60422588/6c71d723-d8d6-4b00-b377-a8f7aa6be0b7)
+
 
 If you take a look at the code result, you'll see that it says that the corn is not diseased with 100% accuracy for corn that is not normally diseased. (It was harder to get leaves from diseased/non-diseased plants than I thought, because people are all interested in the fruit rather than the leaves 😅)
 
