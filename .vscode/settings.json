@@ -3,6 +3,7 @@
     "argmax",
     "astype",
     "AUTOTUNE",
+    "convolutional",
     "Crossentropy",
     "dtype",
     "figsize",
