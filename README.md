@@ -82,7 +82,12 @@ We then needed to apply our trained model to the BloomMate service. We had a num
 1. tensorflow-lite reduces the size of the model (performance remains largely unchanged), so the smaller model is less likely to overload the backend server.
 2. The frontend cannot maintain a bundle size of more than 100MB due to the policies of the Play Store and App Store. The BloomMate application is about 60MB, and even though tensorflow-lite's model is lightweight, it is close to 90MB, so it was not possible to port the model and make it work on the frontend.
 
-So we decided to run the model on a backend powered by Django. (We designed the software from the ground up so that the programming language was the same.) The code for that can be found at [this link](https://github.com/BloomMate/BloomMate-BE/blob/main/plants/utils.py#L45). Finally, check out the recodings and screenshots below to see the diagnosis in action in BloomMate!
+So we decided to run the model on a backend powered by Django. (We designed the software from the ground up so that the programming language was the same.) The code for that can be found at [this link](https://github.com/BloomMate/BloomMate-BE/blob/main/plants/utils.py#L45). See the architecure below. 
+
+<img src="https://github.com/BloomMate/BloomMate-ML/assets/60422588/eb4fca18-6f85-47fe-89cf-436ceeec65dd" width="375" height="725"/>
+
+
+Finally, check out the recodings and screenshots below to see the diagnosis in action in BloomMate!
 
 #### Screenshots
 
