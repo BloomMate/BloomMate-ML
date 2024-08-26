@@ -1,7 +1,5 @@
 # BloomMate - Machine Learning
 
-> This software is part of a project for a software engineering class at **Hanyang University Information Systems Dept.**
-
 > The class is in collaboration with **LG Electronics.**
 
 ## ① Intro & Motivation
